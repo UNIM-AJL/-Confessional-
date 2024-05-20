@@ -1,0 +1,15 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+#void{
+  position: absolute;
+  left:90%;
+  top:90%;
+  color: white;
+}

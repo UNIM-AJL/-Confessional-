@@ -1,0 +1,12 @@
+
+body{
+    font-family: "field-gothic-wide", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.instructions{
+    padding: 1em;
+    font-size: 1.3em;
+}
