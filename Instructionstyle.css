@@ -1,0 +1,33 @@
+
+body{
+    font-family: "field-gothic-wide", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    overflow: hidden;
+}
+
+
+.instructions{
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+#proceed{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 90%;
+    font-family: "field-gothic-wide", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: black;
+}
+
+
+#proceed:hover{
+    color: red;
+}
+
+a{
+    text-decoration: none;
+}

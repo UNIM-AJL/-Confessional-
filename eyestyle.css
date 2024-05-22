@@ -1,0 +1,36 @@
+body{
+  overflow: hidden;
+  background-color: black;
+}
+
+.canvas-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: black; */
+  }
+
+.blankEye{
+    position: absolute;
+    width: 2500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-45%);
+}
+
+
+#link{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: red;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+#link:hover{
+  background-color: blue;
+}

@@ -1,0 +1,89 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}
+
+
+
+
+
+.sideBar{
+  background-color: black;
+  height: 100%;
+  width: 100px;
+  position: absolute;
+}
+
+button{
+  background-color: transparent;
+  border-style: none;
+  color: white;
+  cursor: pointer;
+  font-family: "field-gothic-wide", sans-serif;
+  font-size: 2vw;
+  position: absolute;
+  top: 90%;
+}
+
+
+
+button:hover{
+  color: red;
+  cursor: pointer;
+}
+
+a{
+  animation: blinker 3s linear infinite;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  color: red;
+  text-decoration: none;
+  font-size: 100px;
+  display: none;
+  font-family: "field-gothic-wide", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+@keyframes blinker {
+  50% {
+      opacity: 0;
+  }
+}
+
+a:hover{
+  color: blue;
+}
+
+
+#arrowIMG{
+  position: absolute;
+  width: 5%;
+  left: 1%;
+  top: 75%;
+}
+
+
+#instructions{
+  position: absolute;
+  font-family: "field-gothic-wide", sans-serif;
+  font-weight: 300;
+  color: white;
+  rotate: -90deg;
+  width:70vh;
+  top: 32%;
+  left: -14%;
+}
+
+p{
+  color: black;
+  font-family: "field-gothic-wide", sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+}

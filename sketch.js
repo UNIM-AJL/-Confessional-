@@ -12,13 +12,10 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight); 
   noStroke();
-
+  setupAudio();
   points = font.textToPoints(word, windowWidth/4, windowHeight/2, fontSize,{
   sampleFactor: 0.3 // default is 0.1
 })   
-  
-  
-
   fill(0);
 
 }
@@ -64,5 +61,6 @@ endShape(CLOSE)
 
 function mousePressed(){
 i=i*2
+
 }
 
