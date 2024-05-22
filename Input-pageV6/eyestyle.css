@@ -7,9 +7,24 @@
 
 .blankEye{
     position: absolute;
-    width: 800px;
+    width: 1200px;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
+
+#link{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: red;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+#link:hover{
+  background-color: blue;
+}

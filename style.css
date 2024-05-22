@@ -1,12 +1,45 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-body{
-    font-family: "field-gothic-wide", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+canvas {
+  display: block;
 }
 
 
-.instructions{
-    padding: 1em;
-    font-size: 1.3em;
+
+#enter{
+  animation: blinker 3s linear infinite;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 70%;
+  left: 50%;
+  color: white;
+  cursor: pointer;
+  font-family: "field-gothic-wide", sans-serif;
+  font-weight:500;
+  font-style: italic;
+}
+@keyframes blinker {
+  50% {
+      opacity: 0;
+  }
+}
+
+
+
+#enter:hover{
+  color: red;
+}
+
+
+#instructios{
+  font-family: "field-gothic-wide", sans-serif;
+  font-weight:500;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 90%;
+  left: 50%;
 }

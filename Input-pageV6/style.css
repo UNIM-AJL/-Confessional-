@@ -60,3 +60,30 @@ a{
 a:hover{
   color: blue;
 }
+
+
+#arrowIMG{
+  position: absolute;
+  width: 5%;
+  left: 1%;
+  top: 75%;
+}
+
+
+#instructions{
+  position: absolute;
+  font-family: "field-gothic-wide", sans-serif;
+  font-weight: 300;
+  color: white;
+  rotate: -90deg;
+  width:70vh;
+  top: 32%;
+  left: -14%;
+}
+
+p{
+  color: black;
+  font-family: "field-gothic-wide", sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+}

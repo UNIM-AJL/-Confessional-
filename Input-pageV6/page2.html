@@ -2,28 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Page 2</title>
+    <title>"VOID"</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+    <link rel="stylesheet" href="voidstyle.css">
 </head>
 <body>
-    <script>
-        let img;
 
-        function preload() {
-            // Load the captured image from local storage
-            let imgData = localStorage.getItem('capturedImage');
-            if (imgData) {
-                img = loadImage(imgData);
-            }
-        }
 
-        function setup() {
-            createCanvas(windowWidth, windowHeight);
-            background(255);
-            if (img) {
-                image(img, 0, 0, width/4, height/4);
-            }
-        }
-    </script>
+    <script src="voidsketch.js"></script>
 </body>
 </html>

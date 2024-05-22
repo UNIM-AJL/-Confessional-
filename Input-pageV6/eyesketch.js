@@ -15,7 +15,7 @@ function preload(){
 
 
 function setup() {
-    var canvas = createCanvas(600, 400);
+    var canvas = createCanvas(900, 600);
     canvas.parent('canvas');
     video = createCapture(VIDEO);
     video.size(width, height);
@@ -41,7 +41,7 @@ function draw() {
     translate(width,0);
     scale(-1, 1);
     clear();
-    // background(0);
+    // background(255,0,0);
 
   // We can call both functions to draw all keypoints and the skeletons
   drawKeypoints();
