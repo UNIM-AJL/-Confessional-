@@ -26,17 +26,18 @@ canvas {
 }
 
 
-#link{
+a{
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 50%;
+  top: 55%;
   left: 50%;
-  background-color: red;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  color: red;
+  text-decoration: none;
+  font-family: "field-gothic-wide", sans-serif;
+  font-weight: 500;
 }
 
-#link:hover{
-  background-color: blue;
+a:hover{
+  color: white;
 }
+

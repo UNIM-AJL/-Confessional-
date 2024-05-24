@@ -3,8 +3,8 @@ let img2;
 let cam;
 
 function preload() {
-    // Load the captured image from local storage
     img2= loadImage("images/watchingEye.png")
+     // ChatGPT was used to help get the capture image from the confession page
     let imgData = localStorage.getItem('capturedImage');
     if (imgData) {
         img = loadImage(imgData);
@@ -18,6 +18,11 @@ function setup() {
     setupAudio();
 }
 
+
+
+// Orbital control 
+// Source code: https://p5js.org/examples/3d-orbit-control.html
+// Code has been edited to suit the purposes and intention of the assignment
 // ChatGPT was used to help edit the code to accommodate the captured image
 
 function draw() {

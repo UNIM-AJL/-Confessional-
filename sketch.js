@@ -1,6 +1,10 @@
+// Source code: https://editor.p5js.org/xyu0922/sketches/weyl3vkCv
+// Code was edited in regards to colour, text and positioning
+
+
 let font
 let fontSize = 120
-let word = "Confessional"
+let word = "The VOID"
 let modules=[]
 let i= 1
 
@@ -12,7 +16,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight); 
   noStroke();
-  points = font.textToPoints(word, windowWidth/4, windowHeight/2, fontSize,{
+  points = font.textToPoints(word, windowWidth/3.1, windowHeight/2, fontSize,{
   sampleFactor: 0.3 // default is 0.1
 })   
   fill(0);

@@ -1,7 +1,6 @@
 
 // Start code https://editor.p5js.org/jht1493/sketches/u5jptPqVU
-// Code has been changed and alter from original code
-// Eye tracking with posenet
+// Code has been changed and alter from original code 
 
 // Eye tracking with posenet
 
