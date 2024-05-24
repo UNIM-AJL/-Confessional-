@@ -1,3 +1,5 @@
+// ChatGPT was used to create this section of code that allowed the background music to play continuously across multiple pages
+
 // audioManager.js
 
 let bgAudio;
@@ -7,9 +9,13 @@ function setupAudio() {
     bgAudio = new Audio('eerieMusic.mp3');  // Ensure this path is correct
     bgAudio.loop = true;
 
-    // Check if audio should be playing and restore the current time
-    if (localStorage.getItem('isPlaying') === 'true') {
-        bgAudio.currentTime = parseFloat(localStorage.getItem('currentTime') || 0);
+    // Restore audio state
+    const isPlaying = localStorage.getItem('isPlaying') === 'true';
+    const currentTime = parseFloat(localStorage.getItem('currentTime') || 0);
+
+    bgAudio.currentTime = currentTime;
+
+    if (isPlaying) {
         bgAudio.play();
     }
 
