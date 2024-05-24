@@ -20,10 +20,10 @@ function preload(){
 
 
 function setup() {
-  let cnv =createCanvas(300, 150);
+  let cnv = createCanvas(300, 200);
   video = createCapture(VIDEO);
   video.size(width, height);
-  cnv.position(windowWidth-300, 0, 'fixed');
+  cnv.position(windowWidth-280, 0, 'fixed');
 
   // Create a new poseNet method with a single detection
   poseNet = ml5.poseNet(video, modelReady);
@@ -34,6 +34,7 @@ function setup() {
   });
   // Hide the video element, and just show the canvas
   video.hide();
+  setupAudio();
 }
 
 function modelReady() {
@@ -46,7 +47,7 @@ function draw() {
   scale(-1, 1);
   clear();
   // background(255, 0, 0);
-  image(img2, 10, 0, 300, 150);
+ 
 
   // We can call both functions to draw all keypoints and the skeletons
   drawKeypoints();
@@ -69,12 +70,15 @@ function drawKeypoints() {
       let x = pose.rightEye.x;
       let y = pose.rightEye.y;
       fill(255, 255, 0);
-      image(img,x, y,50, 50/img.width*img.height);
+      image(img,x, y,40, 40/img.width*img.height);
+      
     }
     for (let j = 0; j < pose.keypoints.length; j++) {
       // A keypoint is an object describing a body part (like rightArm or leftShoulder)
       let keypoint = pose.keypoints[j];
       // Only draw an ellipse is the pose probability is bigger than 0.2
     }
+    
   }
+  image(img2, 0, -40, 300, 300/img.width*img.height);
 }

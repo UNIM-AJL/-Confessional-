@@ -3,24 +3,26 @@
 // Code has been changed and alter from original code
 // Eye tracking with posenet
 
+// Eye tracking with posenet
+
 let video;
 let poseNet;
 let poses = [];
 
-var img
+var img;
+var img2;
 
 function preload(){
-  img=loadImage("images/iris3.png");
+  img=loadImage("images/iris3.png")
+  img2=loadImage("images/eyebackground.png")
+  
 }
 
 
 function setup() {
-    var canvas = createCanvas(windowWidth, windowHeight);
-    setupAudio();
-    canvas.parent('canvas');
-    video = createCapture(VIDEO);
-    video.size(width, height);
-    clear();
+  createCanvas(windowWidth, windowHeight);
+  video = createCapture(VIDEO);
+  video.size(width, height);
 
   // Create a new poseNet method with a single detection
   poseNet = ml5.poseNet(video, modelReady);
@@ -31,6 +33,7 @@ function setup() {
   });
   // Hide the video element, and just show the canvas
   video.hide();
+  setupAudio();
 }
 
 function modelReady() {
@@ -39,10 +42,11 @@ function modelReady() {
 
 function draw() {
   image(video, 0, 0, width, height);
-    translate(width,0);
-    scale(-1, 1);
-    clear();
-    // background(255,0,0);
+  translate(width,0);
+  scale(-1, 1);
+  clear();
+  background(0);
+ 
 
   // We can call both functions to draw all keypoints and the skeletons
   drawKeypoints();
@@ -56,16 +60,17 @@ function drawKeypoints() {
     // For each pose detected, loop through all the keypoints
     let pose = poses[i].pose;
     {
-      let x = pose.leftEye.x;
-      let y = pose.leftEye.y;
-
-    }
-    {
       let x = pose.rightEye.x;
       let y = pose.rightEye.y;
       image(img,x, y,300, 300/img.width*img.height);
-      fill(255,0,0);
-      text("biov", x+120, y+150);
+      
     }
+    for (let j = 0; j < pose.keypoints.length; j++) {
+      // A keypoint is an object describing a body part (like rightArm or leftShoulder)
+      let keypoint = pose.keypoints[j];
+      // Only draw an ellipse is the pose probability is bigger than 0.2
+    }
+    
   }
+  image(img2, -350, -330, 2500,windowHeight*2 );
 }

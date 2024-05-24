@@ -45,7 +45,7 @@ function roundToNearest(value, nearest){
 
 function buttonHide(){
   if(captureBtn.mousePressed){
-    captureBtn.hide();
+
   }
 }
 
@@ -64,6 +64,7 @@ function buttonHide(){
       elementToShowHide.style('display', 'block');
     } else {
       elementToShowHide.style('display', 'none');
+      // captureBtn.show();
     }
     //  Code end
 
@@ -76,6 +77,12 @@ function buttonHide(){
       for(let j = 0; j < 150; j++) {
         // How many slices of the image should we make
         const strips = 100;
+
+
+        drawingContext.shadowOffsetX = 0;
+        drawingContext.shadowOffsetY = 0;
+        drawingContext.shadowBlur = 10;
+        drawingContext.shadowColor = 'black';
         
         // Vertical Strips
         // Get the source x,y,width,height
@@ -95,6 +102,5 @@ function buttonHide(){
         copy(sx, sy, sw, sh, dx, dy, dw, dh); 
         loop();
       }
+      captureBtn.hide();
   }
-
-
