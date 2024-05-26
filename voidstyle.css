@@ -25,3 +25,21 @@ canvas {
       opacity: 0;
   }
 }
+
+
+#instructions{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 55%;
+  left: 50%;
+  color: red;
+  cursor: crosshair;
+  font-family: "field-gothic-wide", sans-serif;
+  font-weight:100;
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% {
+      opacity: 0;
+  }
+}

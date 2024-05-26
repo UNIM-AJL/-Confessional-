@@ -15,7 +15,7 @@ function setup() {
   captureBtn.mousePressed(captureAndNavigate);
 // end
 
-elementToShowHide = createA('eye.html','"VOID"');
+elementToShowHide = createA('eye.html','"Enter the VOID"');
 }
   
 
